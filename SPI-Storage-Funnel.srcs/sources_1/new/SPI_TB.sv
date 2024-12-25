@@ -20,9 +20,35 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SPI_TB(
-
-    );
+module SPI_TB();
+    
+    reg clk; 
+    reg start; 
+    reg [7:0] MISO;
+    reg [7:0] MOSI; 
+    reg CS; 
+    
+    wire [7:0] data;
+    wire done; 
+    
+    // clk
+    initial 
+    begin
+        clk = 0; 
+    end
+    
+    always 
+    begin 
+        #5 clk = !clk;
+    end 
+    
+    SPI spi(
+        .clk(clk), .start(start),
+        .MISO(MISO),
+        .MOSI(MOSI),
+        .CS(CS), 
+        .data(data),
+        .DONE(DONE));
     
     
 endmodule

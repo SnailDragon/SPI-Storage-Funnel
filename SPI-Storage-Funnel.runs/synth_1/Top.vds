@@ -1,0 +1,249 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec 23 13:54:07 2024
+# Process ID: 16072
+# Current directory: C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.runs/synth_1/Top.vds
+# Journal file: C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.runs/synth_1\vivado.jou
+# Running On        :JetEngine
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :16800 MB
+# Swap memory       :16800 MB
+# Total Virtual     :33600 MB
+# Available Virtual :4997 MB
+#-----------------------------------------------------------
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 531.953 ; gain = 201.441
+Command: read_checkpoint -auto_incremental -incremental C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34184
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 992.137 ; gain = 446.809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'clk', assumed default net type 'wire' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:38]
+INFO: [Synth 8-11241] undeclared symbol 'CS', assumed default net type 'wire' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:41]
+INFO: [Synth 8-11241] undeclared symbol 'DONE', assumed default net type 'wire' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI_TB.sv:51]
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'SPI' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:24]
+INFO: [Synth 8-3876] $readmem data file 'C:/Users/tyler/Documents/SPI-Storage-Funnel/default.txt' is read successfully [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:47]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'SPI' (0#1) [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:24]
+WARNING: [Synth 8-689] width (8) of port connection 'data' does not match port width (1) of module 'SPI' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:23]
+WARNING: [Synth 8-3848] Net pc in module/entity SPI does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:50]
+WARNING: [Synth 8-3848] Net state in module/entity SPI does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:38]
+WARNING: [Synth 8-3848] Net DONE in module/entity SPI does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:30]
+WARNING: [Synth 8-3848] Net SPI_cs in module/entity Top does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:25]
+WARNING: [Synth 8-3848] Net S_CS in module/entity Top does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:28]
+WARNING: [Synth 8-3848] Net S_MOSI in module/entity Top does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:28]
+WARNING: [Synth 8-3848] Net clk in module/entity Top does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:38]
+WARNING: [Synth 8-3848] Net start in module/entity Top does not have driver. [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/Top.sv:35]
+WARNING: [Synth 8-7129] Port DONE in module SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start in module SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SPI_cs in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_CS in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_MOSI in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_MISO in module Top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1101.207 ; gain = 555.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.207 ; gain = 555.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.207 ; gain = 555.879
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Synth 8-327] inferring latch for variable 'MOSI_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:77]
+WARNING: [Synth 8-327] inferring latch for variable 'CS_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:66]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:79]
+WARNING: [Synth 8-327] inferring latch for variable 'command_index_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:72]
+WARNING: [Synth 8-327] inferring latch for variable 'command_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:60]
+WARNING: [Synth 8-327] inferring latch for variable 'filter_reg' [C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.srcs/sources_1/new/SPI.sv:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.207 ; gain = 555.879
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input   10 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port SPI_cs in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_CS in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_MOSI in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_MISO in module Top is either unconnected or has no load
+WARNING: [Synth 8-264] enable of latch \spi/MOSI_reg  is always disabled
+WARNING: [Synth 8-264] enable of latch \spi/MOSI_reg  is always disabled
+WARNING: [Synth 8-3332] Sequential element (spi/MOSI_reg) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/CS_reg) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/data_reg) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_index_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_index_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_index_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[9]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[8]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[7]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[6]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/command_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (spi/filter_reg) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |OBUF  |     1|
+|2     |OBUFT |     3|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     4|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1290.172 ; gain = 744.844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1290.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1389.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9cf3dd4a
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1389.750 ; gain = 853.703
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1389.750 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/tyler/Documents/SPI-Storage-Funnel/SPI-Storage-Funnel.runs/synth_1/Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 23 13:54:33 2024...

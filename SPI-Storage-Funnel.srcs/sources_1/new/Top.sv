@@ -21,24 +21,27 @@
 
 
 module Top(
-    input [7:0] SPI_in,
-    output SPI_cs,
-    output [7:0] SPI_out,
+    input MISO,
+    output SPI_cs, MOSI,
     
-    input [7:0] Storage_in, 
-    output Storage_cs, 
-    output [7:0] Storage_out 
-    
+    input S_MISO, 
+    output S_CS, S_MOSI 
     );
     
     parameter NUM_LINES = 1;
     
-    wire [7:0] SPI_data; 
-    wire SPI_done, Storage_done; 
+    wire [7:0] data; 
+    wire DONE; 
+    reg start; 
     
-    SPI spi(.in(SPI_in), .out(SPI_out), .data(SPI_data), .enable(1), .done(SPI_done), .cs(SPI_cs)); 
-    
-    Storage storage(.in(Storage_in), .out(Storage_out), .data_in(SPI_data), .enable(1), .done(Storage_done), .cs(Storage_cs)); 
-    
+    SPI spi(
+        .clk(clk), .start(start),
+        .MISO(MISO),
+        .MOSI(MOSI),
+        .CS(CS), 
+        .data(data),
+        .DONE(DONE));   
+        
+     
     
 endmodule

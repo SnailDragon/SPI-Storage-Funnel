@@ -1,0 +1,3 @@
+// BME680 test SPI sequence 
+D0 // get chip id 
+FF // flush? 
